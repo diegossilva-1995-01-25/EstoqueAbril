@@ -1,0 +1,4 @@
+EstoqueAbril
+Sistemas Web feito como teste para processo seletivo para a Editora Abril. Usando Java, HTML, CSS, JSF, Primefaces, Hibernate (persistência JPA), SQL Server, Azure.
+
+Os arquivos .java estão em na pasta Estoque/src dentro dos pacotes bean (managedBeans), control (dao), model (as entidades) e META-INF (onde está o persistence.xml, essencial ao Hibernate), além da Interface Gerenciavel.java (pacote servicos) e o arquivo .sql usado na construção do banco de dados e tabelas. Os .xhtml (arquivos que são lidos no navegador) estão em Estoque/WebContent, as telas são o menu e as telas de cadastros de Cliente, Produto e Pedido e aqui há os diretórios styles, que contém o arquivo .css para elaborar o visual das telas; e há o images, onde contém o papel de parede do sistema. Dentro de Estoque/WebContent/WEB-INF/lib há as bibliotecas usadas para construir este sistema.
