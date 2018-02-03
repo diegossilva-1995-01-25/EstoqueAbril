@@ -1,0 +1,50 @@
+package control;
+
+import java.util.List;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import model.Produto;
+
+public class CtrlProduto {
+
+	private EntityManagerFactory fabric;
+	
+	public CtrlProduto() {
+		
+		fabric = Persistence.createEntityManagerFactory("estoque");
+		
+	}
+	
+	public void adicionar(Produto prod) {
+		
+		
+		
+	}
+	
+	public void alterar(Produto prod) {
+		
+		
+		
+	}
+	
+	public void excluir(Produto prod) {
+		
+		
+		
+	}
+	
+	public List<Produto> consultar(String entrada) {
+		
+		return null;
+		
+	}
+	
+	public List<Produto> todosEles() {
+		
+		return null;
+		
+	}
+	
+}

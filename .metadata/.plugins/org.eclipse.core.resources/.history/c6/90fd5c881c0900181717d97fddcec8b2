@@ -1,0 +1,51 @@
+package bean;
+
+import java.io.Serializable;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import servicos.Gerenciavel;
+
+@ManagedBean(name="MBPedido")
+@SessionScoped
+public class MBPedido implements Gerenciavel, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3288079959463904200L;
+
+	@Override
+	public String adicionar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String alterar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String consultar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String excluir() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String todos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

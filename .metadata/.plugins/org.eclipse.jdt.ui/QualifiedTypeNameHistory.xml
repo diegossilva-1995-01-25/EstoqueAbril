@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="control.CtrlCliente"/>
+<fullyQualifiedTypeName name="control.CtrlPedido"/>
+<fullyQualifiedTypeName name="model.Pedido"/>
+<fullyQualifiedTypeName name="control.CtrlProduto"/>
+<fullyQualifiedTypeName name="model.Produto"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="model.Cliente"/>
+<fullyQualifiedTypeName name="javax.faces.application.FacesMessage"/>
+<fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
+</qualifiedTypeNameHistroy>

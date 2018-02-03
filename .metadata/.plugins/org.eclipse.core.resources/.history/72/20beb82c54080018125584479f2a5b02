@@ -1,0 +1,41 @@
+package control;
+
+import java.util.List;
+
+import model.Cliente;
+
+public class CtrlPedido {
+
+	
+	
+	public void adicionar(Cliente cli) {
+		
+		
+		
+	}
+	
+	public void alterar(Cliente cli) {
+		
+		
+		
+	}
+	
+	public void excluir(Cliente cli) {
+		
+		
+		
+	}
+	
+	public List<Cliente> consultar(String entrada) {
+		
+		return null;
+		
+	}
+	
+	public List<Cliente> todosEles() {
+		
+		return null;
+		
+	}
+	
+}

@@ -1,0 +1,11 @@
+package servicos;
+
+public interface Gerenciavel {
+
+	public String adicionar();
+	public String alterar();
+	public String consultar();
+	public String excluir();
+	public String todos();
+	
+}

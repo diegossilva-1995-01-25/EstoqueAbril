@@ -1,0 +1,50 @@
+package control;
+
+import java.util.List;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import model.Pedido;
+
+public class CtrlPedido {
+
+	private EntityManagerFactory fabric;
+	
+	public CtrlPedido() {
+		
+		fabric = Persistence.createEntityManagerFactory("estoque");
+		
+	}
+	
+	public void adicionar(Pedido ped) {
+		
+		
+		
+	}
+	
+	public void alterar(Pedido ped) {
+		
+		
+		
+	}
+	
+	public void excluir(Pedido ped) {
+		
+		
+		
+	}
+	
+	public List<Pedido> consultar(String entrada) {
+		
+		return null;
+		
+	}
+	
+	public List<Pedido> todosEles() {
+		
+		return null;
+		
+	}
+	
+}

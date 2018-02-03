@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	
+	background-image: url("../images/papelao.jpg");
+	
+}
+
+h1 {
+	
+	font-family: cursive;
+	color: red;
+	
+}
+
+.button {
+	
+	background-color: white;
+	border-color: red;
+	border-width: 3px;
+	font-family: cursive;
+	color: blue;
+	text-decoration: underline;
+	height: 30px;
+	width: 200px;
+	margin: 25px
+	
+}
+
+

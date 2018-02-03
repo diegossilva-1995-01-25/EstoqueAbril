@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Menu Principal (Estoque)</title>
+	<link type="text/css" rel="stylesheet" href="styles/estilos.css"/>
+</head>
+
+<body>
+	
+	<h:form>
+	
+		<h1>Escolha uma das Opções</h1>
+		
+		<p:panelGrid columns="3">
+		
+			<p:button value="Cadastro de Clientes" href="cliente.xhtml" styleClass="button"/>
+			<p:button value="Cadastro de Produtos" href="produto.xhtml" styleClass="button"/>
+			<p:button value="Registro de Clientes" href="pedido.xhtml" styleClass="button"/>
+		
+		</p:panelGrid>
+	
+	</h:form>
+	
+</body>
+
+</html>

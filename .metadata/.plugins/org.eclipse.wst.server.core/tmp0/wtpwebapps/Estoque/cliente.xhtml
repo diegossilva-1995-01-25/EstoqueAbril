@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Cadastro de Clientes</title>
+	<link type="text/css" rel="stylesheet" href="styles/estilos.css"/>
+</h:head>
+
+<h:body>
+
+	<h1>Cadastro de Cliente</h1>
+	
+	<h:form>
+		
+		<h:panelGrid columns="2" styleClass="panel">
+			
+			<p:outputLabel value="Id" styleClass="outputLabel"/>
+			<p:inputText id="txtId" value="" styleClass="inputText"/>
+			
+			<p:outputLabel value="Nome" styleClass="outputLabel"/>
+			<p:inputText id="txtNome" value="" styleClass="inputText"
+			validatorMessage="Nome tem que ter mais que 2 e menos que 100 letras.">
+				<f:validateLength minimum="2" maximum="100"/>
+			</p:inputText>
+			
+			<p:outputLabel value="E-mail" styleClass="outputLabel"/>
+			<p:inputText id="txtEmail" value="" styleClass="inputText"
+			validatorMessage="E-mail tem que ter mais que 2 e menos que 100 letras.">
+				<f:validateLength minimum="2" maximum="100"/>
+			</p:inputText>
+			
+			<p:outputLabel value="Telefone" styleClass="outputLabel"/>
+			<p:inputText id="txtTelefone" value="" styleClass="inputText"
+			validatorMessage="Telefone tem que ter mais que 8 e menos que 25 números.">
+				<f:validateLength minimum="8" maximum="25"/>
+			</p:inputText>
+			
+			<h:commandButton action="#{MBCliente.adicionar()}" value="Adicionar" styleClass="button"/>
+			<h:commandButton action="#{MBCliente.alterar()}" value="Alterar" styleClass="button"/>
+			<h:commandButton action="#{MBCliente.consultar()}" value="Consultar" styleClass="button"/>
+			<h:commandButton action="#{MBCliente.excluir()}" value="Excluir" styleClass="button"/>
+			<h:commandButton action="#{MBCliente.todos()}" value="Todos" styleClass="button"/>
+			<h:commandButton action="" value="Voltar" href="menu.xhtml" styleClass="button"/>
+			
+		</h:panelGrid>
+		
+		<p:dataTable value="#{MBCliente.clientes}" var="cliente" rows="10"
+		paginator="true" rendered="#{MBCliente.clientes.size() > 0}">
+			
+			<p:column>
+				<h:outputText value="#{cliente.id}" />
+				<f:facet name="header">ID</f:facet>
+			</p:column>
+			
+			<p:column>
+				<h:outputText value="#{cliente.nome}" />
+				<f:facet name="header">Nome</f:facet>
+			</p:column>
+			
+			<p:column>
+				<h:outputText value="#{cliente.email}" />
+				<f:facet name="header">E-mail</f:facet>
+			</p:column>
+			
+			<p:column>
+				<h:outputText value="#{cliente.telefone}" />
+				<f:facet name="header">Telefone</f:facet>
+			</p:column>
+			
+		</p:dataTable>
+		
+	</h:form>
+	
+</h:body>
+
+</html>

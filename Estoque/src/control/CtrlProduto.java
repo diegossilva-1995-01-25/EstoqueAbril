@@ -1,0 +1,90 @@
+package control;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import model.Produto;
+
+public class CtrlProduto {
+	
+	/**
+	 * Classe responsável pelo controle de produto, onde temos o CRUD.
+	 */
+
+	private EntityManagerFactory fabric;
+	private EntityManager gerenciador;
+	
+	public CtrlProduto() {
+		
+		fabric = Persistence.createEntityManagerFactory("estoque");
+		
+	}
+	
+	public void adicionar(Produto prod) {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		gerenciador.getTransaction().begin();
+		gerenciador.persist(prod);
+		gerenciador.getTransaction().commit();
+		gerenciador.close();
+		
+	}
+	
+	public void alterar(Produto prod) {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		gerenciador.getTransaction().begin();
+		gerenciador.merge(prod);
+		gerenciador.getTransaction().commit();
+		gerenciador.close();
+		
+	}
+	
+	public void excluir(Produto prod) {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		Query query = gerenciador.createQuery("delete from Produto prod where"
+				+ " prod.id = :entrada");
+		query.setParameter("entrada", prod.getId());
+		gerenciador.close();
+		
+	}
+	
+	public List<Produto> consultar(String entrada) {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		TypedQuery<Produto> query = gerenciador.createQuery(
+				"select prod from Produto prod where c.nome = :n", 
+				Produto.class);
+		query.setParameter("n", entrada);
+		List<Produto> lista = query.getResultList();
+		gerenciador.close();
+		
+		return lista;
+		
+	}
+	
+	public List<Produto> todosEles() {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		TypedQuery<Produto> query = gerenciador.createQuery(
+				"select prod from Produto prod", 
+				Produto.class);
+		List<Produto> lista = query.getResultList();
+		gerenciador.close();
+		
+		return lista;
+		
+	}
+	
+}

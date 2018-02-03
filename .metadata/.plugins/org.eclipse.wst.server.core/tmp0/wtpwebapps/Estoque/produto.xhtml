@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Cadastro de Produto</title>
+	<link type="text/css" rel="stylesheet" href="styles/estilos.css"/>
+</h:head>
+
+<h:body>
+
+	<h1>Cadastro de Produtos</h1>
+	
+	<h:form>
+		
+		<h:panelGrid columns="2" styleClass="panel">
+			
+			<p:outputLabel value="Id" styleClass="outputLabel"/>
+			<p:inputText id="txtId" value="" styleClass="inputText"/>
+			
+			<p:outputLabel value="Nome" styleClass="outputLabel"/>
+			<p:inputText id="txtNome" value="" styleClass="inputText"
+			validatorMessage="Nome tem que ter mais que 2 e menos que 100 letras.">
+				<f:validateLength minimum="2" maximum="100"/>
+			</p:inputText>
+			
+			<p:outputLabel value="Descrição" styleClass="outputLabel"/>
+			<p:inputTextarea id="txtDescricao" value="" styleClass="inputText" 
+			validatorMessage="Descrição tem que ter menos que 255 letras." cols="25" rows="10">
+				<f:validateLength minimum="2" maximum="255"/>
+			</p:inputTextarea>
+			
+			<p:outputLabel value="Preço" styleClass="outputLabel"/>
+			<p:inputNumber id="txtPreco" value="" styleClass="inputNumber"
+			decimalPlaces="2" decimalSeparator="," thousandSeparator="."
+			maxValue="99999.99" validatorMessage="Não pode ser vazio.">
+				<f:validateLength minimum="1"/>
+			</p:inputNumber>
+			
+			<h:commandButton action="#{MBProduto.adicionar()}" value="Adicionar" styleClass="button"/>
+			<h:commandButton action="#{MBProduto.alterar()}" value="Alterar" styleClass="button"/>
+			<h:commandButton action="#{MBProduto.consultar()}" value="Consultar" styleClass="button"/>
+			<h:commandButton action="#{MBProduto.excluir()}" value="Excluir" styleClass="button"/>
+			<h:commandButton action="#{MBProduto.todos()}" value="Todos" styleClass="button"/>
+			<h:commandButton action="" value="Voltar" href="menu.xhtml" styleClass="button"/>
+			
+		</h:panelGrid>
+		
+		<p:dataTable value="#{MBProduto.produtos}" var="produto" rows="10"
+		paginator="true" rendered="#{MBProduto.produtos.size() > 0}">
+			
+			<p:column>
+				<h:outputText value="#{produto.id}" />
+				<f:facet name="header">ID</f:facet>
+			</p:column>
+			
+			<p:column>
+				<h:outputText value="#{produto.nome}" />
+				<f:facet name="header">Nome</f:facet>
+			</p:column>
+			
+			<p:column>
+				<h:outputText value="#{produto.descricao}" />
+				<f:facet name="header">Descrição</f:facet>
+			</p:column>
+			
+			<p:column>
+				<h:outputText value="#{produto.preco}" />
+				<f:facet name="header">Preço</f:facet>
+			</p:column>
+			
+		</p:dataTable>
+		
+	</h:form>
+	
+</h:body>
+
+</html>

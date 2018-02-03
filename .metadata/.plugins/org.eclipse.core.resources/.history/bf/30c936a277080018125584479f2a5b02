@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Registro de Pedidos</title>
+	<link type="text/css" rel="stylesheet" href="styles/estilos.css"/>
+</h:head>
+
+<h:body>
+	
+	<h1>Registro de Pedidos</h1>
+	
+	<h:form>
+		
+		<h:panelGrid columns="2" styleClass="panel">
+			
+			<p:outputLabel value="Id" styleClass="outputLabel"/>
+			<p:inputText id="txtId" value="" styleClass="inputText"/>
+			
+			<p:outputLabel value="Nome" styleClass="outputLabel"/>
+			<p:inputText id="txtNome" value="" styleClass="inputText"
+			validatorMessage="Nome tem que ter mais que 2 e menos que 100 letras.">
+				<f:validateLength minimum="2" maximum="100"/>
+			</p:inputText>
+			
+			<p:outputLabel value="E-mail" styleClass="outputLabel"/>
+			<p:inputText id="txtEmail" value="" styleClass="inputText"
+			validatorMessage="E-mail tem que ter mais que 2 e menos que 100 letras.">
+				<f:validateLength minimum="2" maximum="100"/>
+			</p:inputText>
+			
+			<p:outputLabel value="Telefone" styleClass="outputLabel"/>
+			<p:inputText id="txtTelefone" value="" styleClass="inputText"
+			validatorMessage="Telefone tem que ter mais que 8 e menos que 25 números.">
+				<f:validateLength minimum="8" maximum="25"/>
+			</p:inputText>
+			
+			<p:button value="Adicionar" styleClass="button"/>
+			<p:button value="Alterar" styleClass="button"/>
+			<p:button value="Consultar" styleClass="button"/>
+			<p:button value="Excluir" styleClass="button"/>
+			<p:button value="Todos" styleClass="button"/>
+			<p:button value="Voltar" href="menu.xhtml" styleClass="button"/>
+			
+		</h:panelGrid>
+		
+	</h:form>
+	
+</h:body>
+
+</html>

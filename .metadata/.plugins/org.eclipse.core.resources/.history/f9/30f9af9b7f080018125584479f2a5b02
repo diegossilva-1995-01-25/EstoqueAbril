@@ -1,0 +1,83 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	
+	background-image: url("../images/papelao.jpg");
+	
+}
+
+.panel {
+	
+	background-color: transparent;
+	
+}
+
+h1 {
+	
+	font-family: cursive;
+	color: red;
+	text-align: center;
+	font-weight: bolder;
+	
+}
+
+.button button  {
+	
+	background-color: green;
+	border-color: red;
+	border-width: 5px;
+	font-family: cursive;
+	color: blue;
+	text-decoration: underline;
+	height: 50px;
+	width: 200px;
+	margin: 25px;
+	
+}
+
+.buttonMenu button {
+	
+	background-color: white;
+	border-color: red;
+	border-width: 5px;
+	font-family: cursive;
+	color: blue;
+	text-decoration: underline;
+	height: 50px;
+	width: 250px;
+	margin: 25px;
+	
+}
+
+.outputLabel {
+	
+	background-color: transparent;
+	color: red;
+	margin: 25px;
+	font-family: cursive;
+	font-weight: bolder;
+	
+}
+
+.inputText {
+	
+	background-color: transparent;
+	color: blue;
+	margin: 25px;
+	font-family: cursive;
+	border-bottom-width: 5px;
+	border-bottom-color: red;
+	
+}
+
+/* Põe-se o input nesse tipo de caso para o componente aceitar o css */
+.inputNumber input {
+	
+	background-color: transparent;
+	color: blue;
+	margin: 25px;
+	font-family: cursive;
+	border-bottom-width: 5px;
+	border-bottom-color: red;
+	
+}

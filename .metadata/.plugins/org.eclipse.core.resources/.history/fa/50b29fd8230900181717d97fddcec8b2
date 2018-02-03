@@ -1,0 +1,86 @@
+package control;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+
+import model.Cliente;
+
+public class CtrlCliente {
+
+	private EntityManagerFactory fabric;
+	private EntityManager gerenciador;
+	
+	public CtrlCliente() {
+		
+		fabric = Persistence.createEntityManagerFactory("estoque");
+		
+	}
+	
+	public void adicionar(Cliente cli) {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		gerenciador.getTransaction().begin();
+		gerenciador.persist(cli);
+		gerenciador.getTransaction().commit();
+		gerenciador.close();
+		
+	}
+	
+	public void alterar(Cliente cli) {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		gerenciador.getTransaction().begin();
+		gerenciador.merge(cli);
+		gerenciador.getTransaction().commit();
+		gerenciador.close();
+		
+	}
+	
+	public void excluir(Cliente cli) {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		Query query = gerenciador.createQuery("delete from Cliente cli where"
+				+ " cli.id = :entrada");
+		query.setParameter("entrada", cli.getId());
+		gerenciador.close();
+		
+	}
+	
+	public List<Cliente> consultar(String entrada) {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		TypedQuery<Cliente> query = gerenciador.createQuery(
+				"select cli from Cliente cli where cli.nome = :n", 
+				Cliente.class);
+		query.setParameter("n", entrada);
+		List<Cliente> lista = query.getResultList();
+		gerenciador.close();
+		
+		return lista;
+		
+	}
+	
+	public List<Cliente> todosEles() {
+		
+		gerenciador = fabric.createEntityManager();
+		
+		TypedQuery<Cliente> query = gerenciador.createQuery(
+				"select cli from Cliente cli", 
+				Cliente.class);
+		List<Cliente> lista = query.getResultList();
+		gerenciador.close();
+		
+		return lista;
+		
+	}
+	
+}

@@ -1,0 +1,13 @@
+127.0.0.1 - - [03/Feb/2018:18:39:30 -0200] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:32 -0200] "GET /Estoque/menu.xhtml HTTP/1.1" 200 3043
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:32 -0200] "GET /Estoque/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo HTTP/1.1" 200 24202
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:32 -0200] "GET /Estoque/javax.faces.resource/components.css.xhtml;jsessionid=0FBD4579EFFB1C82A75443450D44511E?ln=primefaces&v=6.1 HTTP/1.1" 200 78541
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:32 -0200] "GET /Estoque/styles/estilos.css HTTP/1.1" 200 1223
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:32 -0200] "GET /Estoque/javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=0FBD4579EFFB1C82A75443450D44511E?ln=primefaces&v=6.1 HTTP/1.1" 200 107785
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:32 -0200] "GET /Estoque/javax.faces.resource/core.js.xhtml;jsessionid=0FBD4579EFFB1C82A75443450D44511E?ln=primefaces&v=6.1 HTTP/1.1" 200 31198
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:32 -0200] "GET /Estoque/javax.faces.resource/components.js.xhtml;jsessionid=0FBD4579EFFB1C82A75443450D44511E?ln=primefaces&v=6.1 HTTP/1.1" 200 380560
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:33 -0200] "GET /Estoque/images/papelao.jpg HTTP/1.1" 200 79047
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:33 -0200] "GET /Estoque/javax.faces.resource/images/ui-bg_highlight-hard_80_c4c4c4_1x100.png.xhtml?ln=primefaces-aristo HTTP/1.1" 200 2822
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:33 -0200] "GET /Estoque/javax.faces.resource/images/ui-bg_highlight-hard_80_85b2cb_1x100.png.xhtml?ln=primefaces-aristo HTTP/1.1" 200 2838
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:34 -0200] "GET /Estoque/javax.faces.resource/images/ui-bg_inset-hard_65_85b2cb_1x100.png.xhtml?ln=primefaces-aristo HTTP/1.1" 200 2832
+0:0:0:0:0:0:0:1 - - [03/Feb/2018:18:39:34 -0200] "GET /Estoque/cliente.xhtml;jsessionid=0FBD4579EFFB1C82A75443450D44511E HTTP/1.1" 500 7556

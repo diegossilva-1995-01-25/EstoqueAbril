@@ -1,0 +1,84 @@
+package bean;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
+
+import control.CtrlCliente;
+import model.Cliente;
+import servicos.Gerenciavel;
+
+@ManagedBean(name="MBCliente")
+@SessionScoped
+public class MBCliente implements Gerenciavel, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5353528350480182923L;
+	
+	private CtrlCliente controleCli = new CtrlCliente();
+	
+	private Cliente ultimoCli = new Cliente();
+	private List<Cliente> clientes = new ArrayList<>();
+		
+	public Cliente getUltimoCli() {
+		return ultimoCli;
+	}
+
+	public List<Cliente> getClientes() {
+		return clientes;
+	}
+
+	public void setUltimoCli(Cliente ultimoCli) {
+		this.ultimoCli = ultimoCli;
+	}
+
+	public void setClientes(List<Cliente> clientes) {
+		this.clientes = clientes;
+	}
+
+	@Override
+	public String adicionar() {
+		// TODO Auto-generated method stub
+				
+		controleCli.adicionar(ultimoCli);
+		ultimoCli = new Cliente();
+		FacesMessage mensag = new FacesMessage("Cliente adicionado com sucesso.");
+		FacesContext.getCurrentInstance().addMessage(null, mensag);
+		
+		return null;
+	}
+
+	@Override
+	public String alterar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String consultar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String excluir() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String todos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

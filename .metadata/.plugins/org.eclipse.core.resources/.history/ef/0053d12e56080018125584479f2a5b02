@@ -1,0 +1,60 @@
+package control;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import model.Cliente;
+
+public class CtrlCliente {
+
+	private EntityManagerFactory fabric;
+	
+	public CtrlCliente() {
+		
+		fabric = Persistence.createEntityManagerFactory("estoque");
+		
+	}
+	
+	public void adicionar(Cliente cli) {
+		
+		EntityManager gerenciador = fabric.createEntityManager();
+		
+		gerenciador.getTransaction().begin();
+		gerenciador.persist(cli);
+		gerenciador.getTransaction().commit();
+		gerenciador.close();
+		
+	}
+	
+	public void alterar(Cliente cli) {
+		
+		EntityManager gerenciador = fabric.createEntityManager();
+		gerenciador.getTransaction().begin();
+		gerenciador.merge(cli);
+		gerenciador.getTransaction().commit();
+		gerenciador.close();
+		
+	}
+	
+	public void excluir(Cliente cli) {
+		
+		
+		
+	}
+	
+	public List<Cliente> consultar(String entrada) {
+		
+		return null;
+		
+	}
+	
+	public List<Cliente> todosEles() {
+		
+		return null;
+		
+	}
+	
+}

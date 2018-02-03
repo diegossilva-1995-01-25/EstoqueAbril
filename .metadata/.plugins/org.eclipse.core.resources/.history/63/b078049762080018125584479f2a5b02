@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	
+	background-image: url("../images/papelao.jpg");
+	
+}
+
+h1 {
+	
+	font-family: cursive;
+	color: red;
+	
+}
